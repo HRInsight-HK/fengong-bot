@@ -26,11 +26,22 @@ const TOKEN = process.env.WECOM_TOKEN;
 const AES_KEY = process.env.WECOM_ENCODING_AES_KEY;
 
 if (!CORP_ID || !TOKEN || !AES_KEY) {
-  console.error('[启动失败] 缺少环境变量：WECOM_CORP_ID / WECOM_TOKEN / WECOM_ENCODING_AES_KEY');
-  console.error('本地测试可先设这三个变量再启动；Render 上在 Environment 里配置。');
+  console.warn('[提示] WECOM_CORP_ID / WECOM_TOKEN / WECOM_ENCODING_AES_KEY 未配置');
+  console.warn('       回调会返回 503，直到这三个环境变量补齐。');
 }
 
-const crypt = new WXBizMsgCrypt(TOKEN || 'x', AES_KEY || 'x', CORP_ID || 'x');
+/** 延迟初始化 WXBizMsgCrypt：每次请求按需构建（env 已就位时才真正可用） */
+let _crypt = null;
+function getCrypt() {
+  if (_crypt) return _crypt;
+  if (!CORP_ID || !TOKEN || !AES_KEY) {
+    const err = new Error('WECOM_CORP_ID / WECOM_TOKEN / WECOM_ENCODING_AES_KEY 未配置');
+    err.code = 'NOT_CONFIGURED';
+    throw err;
+  }
+  _crypt = new WXBizMsgCrypt(TOKEN, AES_KEY, CORP_ID);
+  return _crypt;
+}
 
 /** 从 XML 里取字段（CDATA 或纯文本） */
 function xmlField(xml, tag) {
@@ -56,8 +67,8 @@ function buildEncryptedReply(replyText, toUser, nonce) {
     `<Content><![CDATA[${replyText}]]></Content>`,
     '</xml>',
   ].join('');
-  const encrypted = crypt.encrypt(inner);
-  const sig = crypt.getSignature(ts, nonce, encrypted);
+  const encrypted = getCrypt().encrypt(inner);
+  const sig = getCrypt().getSignature(ts, nonce, encrypted);
   return [
     '<xml>',
     `<Encrypt><![CDATA[${encrypted}]]></Encrypt>`,
@@ -93,6 +104,7 @@ const server = http.createServer((req, res) => {
     if (req.method === 'GET') {
       const echostr = q.get('echostr') || '';
       try {
+        const crypt = getCrypt();
         const sig = crypt.getSignature(timestamp, nonce, echostr);
         if (sig !== msgSignature) {
           res.writeHead(403);
@@ -120,12 +132,12 @@ const server = http.createServer((req, res) => {
             res.writeHead(400);
             return res.end('bad xml');
           }
-          const sig = crypt.getSignature(timestamp, nonce, encrypted);
+          const sig = getCrypt().getSignature(timestamp, nonce, encrypted);
           if (sig !== msgSignature) {
             res.writeHead(403);
             return res.end('signature mismatch');
           }
-          const plainXml = crypt.decrypt(encrypted);
+          const plainXml = getCrypt().decrypt(encrypted);
           const fromUser = xmlField(plainXml, 'FromUserName');
           const msgType = xmlField(plainXml, 'MsgType');
           const content = xmlField(plainXml, 'Content');
@@ -161,6 +173,14 @@ const server = http.createServer((req, res) => {
 
   res.writeHead(404);
   res.end('not found');
+});
+
+// 全局兜底：任何未捕获异常只打印，不让进程退出
+process.on('uncaughtException', err => {
+  console.error('[uncaughtException]', err);
+});
+process.on('unhandledRejection', err => {
+  console.error('[unhandledRejection]', err);
 });
 
 server.listen(PORT, () => {
