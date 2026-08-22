@@ -20,7 +20,7 @@ const fs = require('fs');
 const path = require('path');
 const { URL } = require('url');
 const { WXBizMsgCrypt } = require('./wecom-crypto');
-const { answer } = require('./matcher');
+const { answer, answerRich } = require('./matcher');
 
 const INDEX_HTML = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
 
@@ -107,8 +107,9 @@ const server = http.createServer((req, res) => {
         q = (JSON.parse(Buffer.concat(chunks).toString('utf8')) || {}).q || '';
       } catch (_) { /* ignore */ }
       try {
+        const r = answerRich(q);
         res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-        return res.end(JSON.stringify({ answer: answer(q) }));
+        return res.end(JSON.stringify({ answer: r.text, table: r.table }));
       } catch (err) {
         console.error('[ask 失败]', err);
         res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });

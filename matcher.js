@@ -122,21 +122,74 @@ function helpText() {
     '· 海外客户订单要报关',
     '',
     '已收录 9 个板块共 ' + ENTRIES.length + ' 条对接事项：总务部 / 销售秘书处 / 财务部 / 人事部 / 采购部 / 效率部 / 自营部 / 香港仓库 / 内贸部',
+    '直接发部门名也行：香港 / 仓库 / 内贸销售 / 自营平台 / 总务 / 采购 / 财务 / 人事 / 秘书处',
     '回复「帮助」看本提示',
   ].join('\n');
 }
 
 /** 部门直达：把某个部门的全部对接事项列成清单 */
+/** 部门别名 → 标准部门名（用户叫法千奇百怪，全部归一） */
+const DEPT_ALIAS_ENTRIES = {
+  '香港仓库': ['香港', '香港仓', '香港分部', '仓库', '货仓', 'HK仓', 'hk仓'],
+  '内贸部': ['内贸', '内贸销售'],
+  '总务部': ['总务'],
+  '财务部': ['财务'],
+  '自营部': ['自营', '自营平台'],
+  '效率部': ['效率'],
+  '采购部': ['采购'],
+  '人事部': ['人事'],
+  '销售秘书处': ['销售秘书', '秘书处', '秘书'],
+};
+const DEPT_ALIAS = {};
+for (const [dept, aliases] of Object.entries(DEPT_ALIAS_ENTRIES)) {
+  DEPT_ALIAS[dept] = dept;
+  for (const a of aliases) DEPT_ALIAS[a] = dept;
+}
+/** 部门名后缀（「内贸」+「销售」=「内贸销售」也算部门查询） */
+const DEPT_SUFFIXES = new Set(['', '部', '分部', '平台', '仓', '仓库', '销售', '销售部', '平台部', '秘书处']);
+
+/** 模糊识别部门：精确别名 / 别名包含 / 别名+后缀，返回标准部门名或 null */
+function findDept(cleaned) {
+  if (!cleaned || cleaned.length < 2) return null;
+  if (DEPT_ALIAS[cleaned]) return DEPT_ALIAS[cleaned];
+  // 用户输入是部门名的一部分（如「总务」⊂「总务部」）
+  for (const alias of Object.keys(DEPT_ALIAS)) {
+    if (alias.length >= 2 && alias.includes(cleaned)) return DEPT_ALIAS[alias];
+  }
+  // 用户输入 = 部门别名 + 部门后缀（如「内贸」+「销售」）
+  for (const alias of Object.keys(DEPT_ALIAS)) {
+    if (alias.length >= 2 && cleaned.startsWith(alias) && DEPT_SUFFIXES.has(cleaned.slice(alias.length))) {
+      return DEPT_ALIAS[alias];
+    }
+  }
+  return null;
+}
+
+/** 部门直达：把某个部门的全部对接事项列成清单（文字版 + 表格版） */
 function deptListing(dept) {
   const list = ENTRIES.filter(e => e.dept === dept);
   const parts = [`【${dept}】共 ${list.length} 条对接事项：`, ''];
+  const rows = [];
   list.forEach(e => {
-    const mod = e.module ? e.module + ' · ' : '';
-    const backup = (e.backup && e.backup !== '/' && e.backup !== e.primary) ? `（备份：${e.backup}）` : '';
-    parts.push(`· ${mod}${e.item} → ${e.primary}${backup}`);
+    const mod = (e.module && e.module !== '/') ? e.module + ' · ' : '';
+    const hasBackup = e.backup && e.backup !== '/' && e.backup !== e.primary;
+    parts.push(`· ${mod}${e.item} → ${e.primary}${hasBackup ? `（备份：${e.backup}）` : ''}`);
+    rows.push([
+      (e.module && e.module !== '/') ? e.module : '—',
+      e.item,
+      e.primary,
+      hasBackup ? e.backup : '—',
+    ]);
   });
   parts.push('', '💡 在企业微信搜名字即可发起会话');
-  return parts.join('\n');
+  return {
+    text: parts.join('\n'),
+    table: {
+      title: dept + ' · 共 ' + list.length + ' 条',
+      columns: ['小组', '对外承接事项', '主要负责人', '备份负责人'],
+      rows,
+    },
+  };
 }
 
 /** 主入口：传入用户问题，返回回复文本 */
@@ -148,12 +201,9 @@ function answer(rawQuery) {
   const cleaned = cleanQuery(query);
   if (!cleaned && query.length <= 6) return helpText();
 
-  // 部门直达：问的就是部门名（如「香港」「仓库」「人事部」「采购」），列出该部门全部对接人
-  if (cleaned.length >= 2 && cleaned.length <= 6) {
-    const depts = [...new Set(ENTRIES.map(e => e.dept).filter(Boolean))];
-    const hit = depts.find(d => d.includes(cleaned) || cleaned.includes(d));
-    if (hit) return deptListing(hit);
-  }
+  // 部门直达：问的就是部门名（香港/仓库/内贸销售/自营平台/总务……），列出该部门全部对接人
+  const dept = findDept(cleaned);
+  if (dept) return deptListing(dept).text;
 
   // 同义词扩展
   const terms = [];
@@ -198,4 +248,15 @@ function answer(rawQuery) {
   return parts.join('\n');
 }
 
-module.exports = { answer, helpText };
+/** 结构化出口：网页版用，返回 { text, table }（部门直达时带表格数据） */
+function answerRich(rawQuery) {
+  const query = String(rawQuery || '').trim();
+  if (!query) return { text: helpText(), table: null };
+  if (/^(帮助|help|菜单|hi|你好|您好|hello)$/i.test(query)) return { text: helpText(), table: null };
+  const cleaned = cleanQuery(query);
+  const dept = findDept(cleaned);
+  if (dept) return deptListing(dept);
+  return { text: answer(rawQuery), table: null };
+}
+
+module.exports = { answer, answerRich, helpText };

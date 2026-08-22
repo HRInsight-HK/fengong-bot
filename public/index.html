@@ -68,8 +68,14 @@
     white-space: pre-wrap;
   }
   .row.bot .bubble { background: #fff; color: #1a1a1a; border-top-left-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+  .row.bot .bubble.wide { max-width: 94%; overflow-x: auto; white-space: normal; }
   .row.me .bubble { background: #95EC69; color: #10240c; border-top-right-radius: 2px; }
   .row.me .bubble.pending { background: #d4e6c3; color: #5a6b4f; }
+  .tbl-title { font-size: 13px; color: #555; font-weight: 600; margin-bottom: 6px; }
+  table.qtable { border-collapse: collapse; width: 100%; font-size: 13px; }
+  .qtable th, .qtable td { border: 1px solid #e3e6ea; padding: 5px 7px; text-align: left; vertical-align: top; line-height: 1.5; }
+  .qtable th { background: #eef6ff; color: #333; white-space: nowrap; font-weight: 600; }
+  .qtable td:first-child, .qtable td:nth-child(3), .qtable td:nth-child(4) { white-space: nowrap; }
   .sys-tip {
     align-self: center;
     background: rgba(0,0,0,.06);
@@ -162,8 +168,13 @@
   <button class="chip" data-q="下周出差帮我订机票">出差订票</button>
   <button class="chip" data-q="货要加急配货">加急配货</button>
   <button class="chip" data-q="工资条怎么看">工资条</button>
-  <button class="chip" data-q="客户说要来仓库参观">客户到访</button>
   <button class="chip" data-q="合同要盖章">盖章</button>
+  <button class="chip" data-q="香港">香港对接表</button>
+  <button class="chip" data-q="内贸销售">内贸销售表</button>
+  <button class="chip" data-q="总务">总务部表</button>
+  <button class="chip" data-q="自营平台">自营平台表</button>
+  <button class="chip" data-q="采购">采购部表</button>
+  <button class="chip" data-q="人事">人事部表</button>
 </div>
 
 <footer>
@@ -195,6 +206,49 @@
     var row = el('div', 'row bot');
     row.appendChild(el('div', 'bubble-avatar', '🤖'));
     row.appendChild(el('div', 'bubble', text));
+    chat.appendChild(row);
+    scrollBottom();
+  }
+
+  /** 机器人回复：有 table 时渲染表格，否则纯文本 */
+  function addBotRich(d) {
+    var row = el('div', 'row bot');
+    row.appendChild(el('div', 'bubble-avatar', '🤖'));
+    var t = d && d.table;
+    if (t && t.rows && t.rows.length) {
+      var bubble = el('div', 'bubble wide');
+      bubble.appendChild(el('div', 'tbl-title', t.title || ''));
+      var table = document.createElement('table');
+      table.className = 'qtable';
+      var thead = document.createElement('thead');
+      var trh = document.createElement('tr');
+      (t.columns || []).forEach(function (c) {
+        var th = document.createElement('th');
+        th.textContent = c;
+        trh.appendChild(th);
+      });
+      thead.appendChild(trh);
+      table.appendChild(thead);
+      var tbody = document.createElement('tbody');
+      t.rows.forEach(function (r) {
+        var tr = document.createElement('tr');
+        r.forEach(function (c) {
+          var td = document.createElement('td');
+          td.textContent = c;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      bubble.appendChild(table);
+      var tip = el('div', 'tbl-title', '💡 在企业微信搜名字即可发起会话');
+      tip.style.marginTop = '6px';
+      tip.style.fontWeight = '400';
+      bubble.appendChild(tip);
+      row.appendChild(bubble);
+    } else {
+      row.appendChild(el('div', 'bubble', (d && d.answer) || '出了点小问题，再问一次试试～'));
+    }
     chat.appendChild(row);
     scrollBottom();
   }
@@ -242,7 +296,7 @@
       var wait = Math.max(0, 450 - (Date.now() - started)); // 至少显示一下输入动画
       setTimeout(function () {
         chat.removeChild(typingRow);
-        addBot(d.answer || '出了点小问题，再问一次试试～');
+        addBotRich(d);
         sending = false;
         sendBtn.disabled = false;
       }, wait);
