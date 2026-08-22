@@ -16,9 +16,13 @@
  */
 'use strict';
 const http = require('http');
+const fs = require('fs');
+const path = require('path');
 const { URL } = require('url');
 const { WXBizMsgCrypt } = require('./wecom-crypto');
 const { answer } = require('./matcher');
+
+const INDEX_HTML = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
 
 const PORT = process.env.PORT || 3000;
 const CORP_ID = process.env.WECOM_CORP_ID;
@@ -89,8 +93,29 @@ const server = http.createServer((req, res) => {
     return res.end('ok');
   }
   if (path === '/' && req.method === 'GET') {
-    res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-    return res.end('分工小助手运行中 ✅\n回调地址：POST/GET /wecom/callback\n健康检查：/healthz');
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    return res.end(INDEX_HTML);
+  }
+
+  // ---------- 网页版问答接口 ----------
+  if (path === '/api/ask' && req.method === 'POST') {
+    const chunks = [];
+    req.on('data', c => chunks.push(c));
+    req.on('end', () => {
+      let q = '';
+      try {
+        q = (JSON.parse(Buffer.concat(chunks).toString('utf8')) || {}).q || '';
+      } catch (_) { /* ignore */ }
+      try {
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        return res.end(JSON.stringify({ answer: answer(q) }));
+      } catch (err) {
+        console.error('[ask 失败]', err);
+        res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+        return res.end(JSON.stringify({ answer: '出了点小问题，再问一次试试～' }));
+      }
+    });
+    return;
   }
 
   // ---------- 企微回调 ----------
