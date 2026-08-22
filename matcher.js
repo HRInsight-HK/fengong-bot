@@ -33,6 +33,10 @@ const SYNONYMS = {
   花名册: ['花名册'], 职级: ['职级'], 档案: ['档案管理'], 借阅: ['借阅'], 营业执照: ['营业执照'],
   会议: ['会议准备'], 接待: ['接待'], 客户到访: ['客户到访'], 到仓: ['客户到访'],
   参观: ['客户到访'], 来仓库: ['客户到访'], 来仓: ['客户到访'], 拜访: ['客户到访'],
+  香港: ['香港仓库'], 香港仓: ['香港仓库'], 香港分部: ['香港仓库'],
+  仓库: ['香港仓库'], 货仓: ['香港仓库'],
+  拣货: ['拣货', '配货'], 点货: ['点货', '货物清点'], 收货: ['货物接收', '点货'],
+  出货: ['出库'], 打包: ['打包'], 抽货: ['抽货'], 合并发货: ['售前合并', '合并'],
   会议室: ['会议准备'], 工作号: ['工作号'], 邮箱: ['邮箱'], 企微: ['企业微信主体'],
   六面图: ['六面图'], 直播: ['直播'], 送礼: ['送礼'], 车费: ['车费'], 对账: ['对账'],
   欠款: ['欠款'], 余款: ['余款'], 激活: ['待激活'], 客户编码: ['客户编码'],
@@ -122,6 +126,19 @@ function helpText() {
   ].join('\n');
 }
 
+/** 部门直达：把某个部门的全部对接事项列成清单 */
+function deptListing(dept) {
+  const list = ENTRIES.filter(e => e.dept === dept);
+  const parts = [`【${dept}】共 ${list.length} 条对接事项：`, ''];
+  list.forEach(e => {
+    const mod = e.module ? e.module + ' · ' : '';
+    const backup = (e.backup && e.backup !== '/' && e.backup !== e.primary) ? `（备份：${e.backup}）` : '';
+    parts.push(`· ${mod}${e.item} → ${e.primary}${backup}`);
+  });
+  parts.push('', '💡 在企业微信搜名字即可发起会话');
+  return parts.join('\n');
+}
+
 /** 主入口：传入用户问题，返回回复文本 */
 function answer(rawQuery) {
   const query = String(rawQuery || '').trim();
@@ -130,6 +147,13 @@ function answer(rawQuery) {
 
   const cleaned = cleanQuery(query);
   if (!cleaned && query.length <= 6) return helpText();
+
+  // 部门直达：问的就是部门名（如「香港」「仓库」「人事部」「采购」），列出该部门全部对接人
+  if (cleaned.length >= 2 && cleaned.length <= 6) {
+    const depts = [...new Set(ENTRIES.map(e => e.dept).filter(Boolean))];
+    const hit = depts.find(d => d.includes(cleaned) || cleaned.includes(d));
+    if (hit) return deptListing(hit);
+  }
 
   // 同义词扩展
   const terms = [];
