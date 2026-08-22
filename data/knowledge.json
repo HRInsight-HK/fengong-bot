@@ -1,0 +1,826 @@
+{
+ "version": "kb-91-1787395580",
+ "generated_from": "各部门对外承接事项汇总.xlsx（只读提取）",
+ "count": 91,
+ "entries": [
+  {
+   "dept": "香港仓库",
+   "module": "点货组",
+   "item": "货物接收/货物清点入库",
+   "when": "货品急需清点出库时",
+   "primary": "方志强",
+   "backup": "钟志荣",
+   "source": "香港分部"
+  },
+  {
+   "dept": "香港仓库",
+   "module": "配货组",
+   "item": "拣货、配货",
+   "when": "配货单需要加急处理时，",
+   "primary": "林志萍",
+   "backup": "姚小燕",
+   "source": "香港分部"
+  },
+  {
+   "dept": "香港仓库",
+   "module": "出库组",
+   "item": "售前合并、抽货、有特殊的打包要求",
+   "when": "出库前需要合并订单，分单，取消时，打包要求变更时",
+   "primary": "张志承",
+   "backup": "吴粦璨",
+   "source": "香港分部"
+  },
+  {
+   "dept": "香港仓库",
+   "module": "出库组",
+   "item": "安排货物出库",
+   "when": "货物需要加急送出时",
+   "primary": "吴粦璨",
+   "backup": "罗方炫",
+   "source": "香港分部"
+  },
+  {
+   "dept": "香港仓库",
+   "module": "出库组",
+   "item": "提货安排",
+   "when": "提货时间有变更、需要提供司机资料时",
+   "primary": "吴粦璨",
+   "backup": "罗方炫",
+   "source": "香港分部"
+  },
+  {
+   "dept": "内贸部",
+   "module": "渠道小组（市场，开发，平台，港澳台）",
+   "item": "1对1带教安排，渠道客户资源分配",
+   "when": "了解客户承接情况，推品对接，行情信息收集",
+   "primary": "汪玉辉（市场）李佳津（平台））曾飞艳（港澳台）",
+   "backup": "副组长 班吉云（港澳台）",
+   "source": "内贸销售部"
+  },
+  {
+   "dept": "内贸部",
+   "module": "部门资料",
+   "item": "会议资料，客户资料，SOP文件，业务资料等",
+   "when": "查阅资料",
+   "primary": "马永亭（秘书处）",
+   "backup": "曾靓（秘书处）",
+   "source": "内贸销售部"
+  },
+  {
+   "dept": "总务部",
+   "module": "新客户",
+   "item": "内贸新客户新建编码",
+   "when": "内贸新客户确认开单时",
+   "primary": "蔡妙儒",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "流程管理",
+   "item": "各流程异常反馈",
+   "when": "销售端各流程异常时",
+   "primary": "蔡妙儒",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "流程管理",
+   "item": "总务各工作岗位投诉",
+   "when": "总务各环节流程影响效率，需要要改善时",
+   "primary": "蔡妙儒",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "客户到访",
+   "item": "仓库客户到访报备",
+   "when": "确认客户到仓提前报备",
+   "primary": "蔡妙儒",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "销售退款",
+   "item": "售后退款审核",
+   "when": "售后确认退款赔付时",
+   "primary": "蔡妙儒",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "开单",
+   "item": "销售开单、变更单",
+   "when": "销售开单之后需要确认已开数量和预留的产品信息，以及后续改价、改数量",
+   "primary": "钟立东",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "库存协调",
+   "item": "预留变更等",
+   "when": "现货、期货跨部门协调",
+   "primary": "钟立东",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "汇率",
+   "item": "港美、港人汇率",
+   "when": "每日开单、收款汇率确认",
+   "primary": "钟立东",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "寄售",
+   "item": "寄售数据处理（结算/退货）",
+   "when": "客户寄卖确认销售，退货",
+   "primary": "钟立东",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "六面图",
+   "item": "六面图跟进处理",
+   "when": "产品六面图出现缺失、错误，需要跟进处理更新时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "寄存",
+   "item": "寄存通报",
+   "when": "货物寄存业务，需要做寄存通报流程登记时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "出库",
+   "item": "海外/内贸出库审核",
+   "when": "海外、内贸订单准备出库，需要提交出库资料审核时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "出库",
+   "item": "新进/一步到约物流",
+   "when": "需要发新进、一步到物流时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "出库",
+   "item": "海外客户出库报关",
+   "when": "海外客户订单要出库，需要办理报关相关业务时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "售后",
+   "item": "内贸/海外售后退换货处理",
+   "when": "发生销售订单退换货，需要走流程登记处理时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "售后",
+   "item": "内贸/海外售后改单，改价",
+   "when": "内贸/海外订单售后，需要修改调整价格时",
+   "primary": "施谕婷",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "配货",
+   "item": "金蝶配货单审核",
+   "when": "销售提交配货，催审核给仓库配货时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "配货",
+   "item": "配货环节改预留",
+   "when": "发起配货过程中需要修改预留仓位，批号、调整预留信息时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "配货",
+   "item": "配货加急处理",
+   "when": "需要优先配货，加急配货时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "配货跨部门协调",
+   "item": "对接销售和仓库",
+   "when": "配货过程中销售有什么问题需要给到仓库处理时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "车费",
+   "item": "车费确认，统计，催收，罚款",
+   "when": "需要车费明细向客户催收时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "自营退货",
+   "item": "API小仓退货",
+   "when": "需要退货做入库时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "自营调拨",
+   "item": "自营平台之间调拨",
+   "when": "自营各平台之间的调拨，需要做系统单据时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "自营对账",
+   "item": "自营各平台对账",
+   "when": "自营各平台出库需要核对明细，确认差异时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "自营改价",
+   "item": "自营售后改价",
+   "when": "自营出库后需要修改金额时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "出库售前处理",
+   "item": "对接销售仓库售前处理",
+   "when": "已经配好的货需要抽货/合并/封膜/补充更新箱单信息等要二次处理配货单时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "财务数据处理",
+   "item": "配合对接财务",
+   "when": "财务需要业务数据支持/核对异常时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "开单",
+   "item": "客户送礼开单",
+   "when": "给客户送礼 要开单配货时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "总务部",
+   "module": "直播",
+   "item": "直播事项对接",
+   "when": "客户来仓直播涉及的备货需协调对接时",
+   "primary": "朱丽玲",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "新客户",
+   "item": "海外新客户取号",
+   "when": "新客户核定需要开单时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "金蝶对接人",
+   "item": "销售组长更改金蝶客户跟单员",
+   "when": "客户更换销售对接时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "客户维护",
+   "item": "客户是否合作/是否待激活/客户编码",
+   "when": "确认客户是否合作时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "客户维护",
+   "item": "海外A类收款账户核定",
+   "when": "客户提供A类账户时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "新客户",
+   "item": "新客户面谈协同",
+   "when": "新客户需要面谈时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "链路",
+   "item": "海外/内贸链路凭证",
+   "when": "客户有诉求要链路时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "销售秘书处",
+   "module": "零售",
+   "item": "非销售人员零售开单",
+   "when": "公司内部需要开单时",
+   "primary": "马永亭",
+   "backup": "",
+   "source": "总务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "薪酬",
+   "item": "发送工资单、发放工资",
+   "when": "未收到工资单、工资",
+   "primary": "唐小婷",
+   "backup": "massie",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "提成",
+   "item": "采购提成核算",
+   "when": "确认个人提成明细",
+   "primary": "唐小婷",
+   "backup": "采购各组长",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "提成",
+   "item": "海外提成核算",
+   "when": "确认个人提成明细",
+   "primary": "李妍婧",
+   "backup": "海外各组长",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "报销",
+   "item": "日常报销/差旅报销",
+   "when": "未收到报销款、报销被驳回",
+   "primary": "李妍婧",
+   "backup": "",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "客户款项",
+   "item": "客户款项",
+   "when": "对系统欠款/余款存疑",
+   "primary": "李妍婧",
+   "backup": "",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "差旅/日常备用金",
+   "item": "备用金核对",
+   "when": "备用金系统录单以及核对",
+   "primary": "梅建粉",
+   "backup": "莫青霖",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "港币现金",
+   "item": "港币现金核对",
+   "when": "港币现金核对以及录单",
+   "primary": "梅建粉",
+   "backup": "朱丽玲",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "提成/奖金",
+   "item": "内贸提成及奖金核算",
+   "when": "确认个人提成明细",
+   "primary": "程瑶",
+   "backup": "内贸各组长",
+   "source": "财务部"
+  },
+  {
+   "dept": "财务部",
+   "module": "供应商款项",
+   "item": "供应商款项核销及余款核对",
+   "when": "对系统供应商余款存疑（秘书处）",
+   "primary": "程瑶",
+   "backup": "",
+   "source": "财务部"
+  },
+  {
+   "dept": "自营部",
+   "module": "",
+   "item": "自营新人培训事项",
+   "when": "",
+   "primary": "许杰生",
+   "backup": "郝强",
+   "source": "自营平台部"
+  },
+  {
+   "dept": "自营部",
+   "module": "",
+   "item": "自营运营事项",
+   "when": "",
+   "primary": "郝强",
+   "backup": "许杰生",
+   "source": "自营平台部"
+  },
+  {
+   "dept": "自营部",
+   "module": "",
+   "item": "内购事项",
+   "when": "",
+   "primary": "谭云松",
+   "backup": "许杰生",
+   "source": "自营平台部"
+  },
+  {
+   "dept": "自营部",
+   "module": "",
+   "item": "人员规划问题",
+   "when": "",
+   "primary": "千里",
+   "backup": "郝强",
+   "source": "自营平台部"
+  },
+  {
+   "dept": "自营部",
+   "module": "",
+   "item": "物流问题",
+   "when": "",
+   "primary": "陈少佳",
+   "backup": "郝强",
+   "source": "自营平台部"
+  },
+  {
+   "dept": "效率部",
+   "module": "/",
+   "item": "ERP系统使用问题反馈与优化",
+   "when": "/",
+   "primary": "梅建粉",
+   "backup": "/",
+   "source": "采购部"
+  },
+  {
+   "dept": "效率部",
+   "module": "/",
+   "item": "需求匹配系统权限管理",
+   "when": "/",
+   "primary": "梅建粉",
+   "backup": "/",
+   "source": "采购部"
+  },
+  {
+   "dept": "效率部",
+   "module": "/",
+   "item": "数字化需求分析、产品设计即落地",
+   "when": "有数字化提效建议时",
+   "primary": "陶明志",
+   "backup": "/",
+   "source": "采购部"
+  },
+  {
+   "dept": "效率部",
+   "module": "/",
+   "item": "ChatGPT会员月费支付（工作用途）",
+   "when": "/",
+   "primary": "秦敏华",
+   "backup": "/",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "/",
+   "item": "ERP金蝶系统权限管理",
+   "when": "/",
+   "primary": "刘敏",
+   "backup": "梅建粉",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "/",
+   "item": "喵喵报价聚合系统权限管理",
+   "when": "/",
+   "primary": "贝佳燕",
+   "backup": "陶明志",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "秘书组",
+   "item": "新供应商报备认证",
+   "when": "需要新供应商编码",
+   "primary": "刘佩怡",
+   "backup": "/",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "秘书组",
+   "item": "金蝶系统修改信息",
+   "when": "例如修改品牌、品名等信息",
+   "primary": "刘晓庆",
+   "backup": "刘佩怡",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "秘书组",
+   "item": "咨询嘉盛回货",
+   "when": "提货计划提货",
+   "primary": "刘敏",
+   "backup": "徐玉琪",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "秘书组",
+   "item": "订单详情、回货情况、成本修改",
+   "when": "找到自己订单的跟单员",
+   "primary": "秘书处全员",
+   "backup": "徐玉琪",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "秘书组",
+   "item": "供应商数据、采购端系统数据",
+   "when": "/",
+   "primary": "徐玉琪",
+   "backup": "刘敏",
+   "source": "采购部"
+  },
+  {
+   "dept": "采购部",
+   "module": "报价小组",
+   "item": "负责现货表的全流程运营维护，包括但不限于：价格调整、格式优化、版本更新、异常处理等。",
+   "when": "只要涉及现货表的相关需求，均可对接报价小组处理。",
+   "primary": "林丽玲",
+   "backup": "林志玲",
+   "source": "采购部"
+  },
+  {
+   "dept": "人事部",
+   "module": "人员异动",
+   "item": "人员异动需求（薪资变动、岗位变动、职级调整）",
+   "when": "",
+   "primary": "Zoe",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "招聘",
+   "item": "招聘需求对接（对接需求后给到需求部门具体招聘对接人）",
+   "when": "",
+   "primary": "刘俊烨",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "招聘",
+   "item": "招聘进度及面试",
+   "when": "",
+   "primary": "刘俊烨",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "薪酬福利",
+   "item": "工资条",
+   "when": "",
+   "primary": "Massie",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "薪酬福利",
+   "item": "按摩/头疗管理/健身房、福利金&保险对接",
+   "when": "",
+   "primary": "莫青霖",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "薪酬福利",
+   "item": "员工房补",
+   "when": "",
+   "primary": "Zoe",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "入转调离",
+   "item": "入转调离办理、试用期跟进（表单、手续）",
+   "when": "",
+   "primary": "Zoe",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "人力数据",
+   "item": "员工花名册、职级表",
+   "when": "",
+   "primary": "Zoe",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "考勤管理",
+   "item": "考勤申报、考勤异常",
+   "when": "",
+   "primary": "Zoe",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "公司主体办公软件",
+   "item": "企业微信主体申请加入；公司主用邮箱信息咨询",
+   "when": "",
+   "primary": "Zoe",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "用印管理",
+   "item": "合同文件用印、印章外带申请",
+   "when": "",
+   "primary": "Zoe/Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "培训",
+   "item": "培训需求对接及组织安排",
+   "when": "",
+   "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "设备&APP&账号",
+   "item": "各类账号注册、查询统计、账号问题处理（手机号、微信号、WhatsApp、VPN、实名认证等）；设备需求对接",
+   "when": "",
+   "primary": "Zoe/Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "办公环境、后勤保障",
+   "item": "维修咨询：所有公共设备、办公家具、个人办公设备维修",
+   "when": "",
+   "primary": "莫青霖",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "办公环境、后勤保障",
+   "item": "物业对接、饮用水、打印机、清洁方面对接",
+   "when": "",
+   "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "办公环境、后勤保障",
+   "item": "收发快递、名片制作、物料印刷、打印扫描、日常办公用品购买",
+   "when": "",
+   "primary": "Esther/莫青霖",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "行政费用",
+   "item": "充值缴费咨询、深夜食堂报销",
+   "when": "",
+   "primary": "莫青霖",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "行政费用",
+   "item": "公司行政消费报销",
+   "when": "",
+   "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "出差",
+   "item": "所有涉及差旅、订票等服务",
+   "when": "",
+   "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "社保公积金",
+   "item": "社保公积金相关问题咨询：新增、停缴、转档",
+   "when": "",
+   "primary": "莫青霖",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "会务外联",
+   "item": "会客户及日常面试接待、会议准备/协调",
+   "when": "",
+   "primary": "莫青霖",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "档案管理",
+   "item": "营业执照借阅、各部门资料借阅",
+   "when": "",
+   "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  }
+ ]
+}

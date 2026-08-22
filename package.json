@@ -1,0 +1,13 @@
+{
+  "name": "fengong-bot",
+  "version": "1.0.0",
+  "description": "分工小助手 - 企业微信自建应用，大白话查\"什么事找谁\"",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-match.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

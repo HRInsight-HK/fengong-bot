@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fengong-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install || true
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: WECOM_CORP_ID
+        sync: false
+      - key: WECOM_TOKEN
+        sync: false
+      - key: WECOM_ENCODING_AES_KEY
+        sync: false
