@@ -1,7 +1,7 @@
 {
- "version": "kb-93-1787548296",
+ "version": "kb-95-1787555983",
  "generated_from": "各部门对外承接事项汇总.xlsx（只读提取）",
- "count": 93,
+ "count": 95,
  "entries": [
   {
    "dept": "香港仓库",
@@ -625,13 +625,40 @@
    "source": "采购部"
   },
   {
+   "dept": "宣传部",
+   "module": "",
+   "item": "公司资料（公司简介、宣传册、品牌资料等）",
+   "when": "需要公司资料对外展示、投标、合作对接时",
+   "primary": "Yuna",
+   "backup": "",
+   "source": "宣传部"
+  },
+  {
+   "dept": "宣传部",
+   "module": "",
+   "item": "宣传物料（海报、展架、活动物料等）",
+   "when": "需要宣传物料支持（活动、展会、推广等）时",
+   "primary": "Yuna",
+   "backup": "",
+   "source": "宣传部"
+  },
+  {
+   "dept": "宣传部",
+   "module": "",
+   "item": "文化墙内容",
+   "when": "公司文化墙内容需要更新、新增板块时",
+   "primary": "Yuna",
+   "backup": "",
+   "source": "宣传部"
+  },
+  {
    "dept": "人事部",
    "module": "人员异动",
    "item": "人员异动需求（薪资变动、岗位变动、职级调整）",
    "when": "",
    "primary": "Massie",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -640,7 +667,7 @@
    "when": "",
    "primary": "Massie",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -649,7 +676,7 @@
    "when": "",
    "primary": "俊烨",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -658,7 +685,7 @@
    "when": "",
    "primary": "Massie",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -667,7 +694,7 @@
    "when": "",
    "primary": "莫青霖",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -676,7 +703,7 @@
    "when": "",
    "primary": "Zoe",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -685,7 +712,7 @@
    "when": "",
    "primary": "Zoe",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -694,7 +721,7 @@
    "when": "",
    "primary": "Zoe",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -703,7 +730,7 @@
    "when": "",
    "primary": "Zoe",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -712,7 +739,7 @@
    "when": "",
    "primary": "Zoe",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -721,7 +748,7 @@
    "when": "",
    "primary": "Zoe/Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -730,7 +757,7 @@
    "when": "",
    "primary": "Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -739,7 +766,7 @@
    "when": "",
    "primary": "Zoe/Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -748,7 +775,7 @@
    "when": "",
    "primary": "莫青霖",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -757,7 +784,7 @@
    "when": "",
    "primary": "Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -766,7 +793,7 @@
    "when": "",
    "primary": "Esther/莫青霖",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -775,7 +802,7 @@
    "when": "",
    "primary": "莫青霖",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -784,7 +811,7 @@
    "when": "",
    "primary": "Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -793,7 +820,7 @@
    "when": "",
    "primary": "Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -802,7 +829,7 @@
    "when": "",
    "primary": "莫青霖",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -811,7 +838,7 @@
    "when": "",
    "primary": "莫青霖",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -820,7 +847,7 @@
    "when": "",
    "primary": "Esther",
    "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   },
   {
    "dept": "人事部",
@@ -829,16 +856,7 @@
    "when": "",
    "primary": "Esther",
    "backup": "",
-   "source": "人事部对接人指引"
-  },
-  {
-   "dept": "人事部",
-   "module": "宣传部",
-   "item": "公司资料、宣传物料、文化墙内容",
-   "when": "",
-   "primary": "Yuna",
-   "backup": "",
-   "source": "人事部对接人指引"
+   "source": "人事部"
   }
  ]
 }

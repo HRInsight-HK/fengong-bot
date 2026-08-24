@@ -14,8 +14,8 @@ BASE = Path(__file__).resolve().parent          # bot/
 EXCEL = BASE.parent / "各部门对外承接事项汇总.xlsx"
 OUT = BASE / "data" / "knowledge.json"
 
-SIX_COL_SHEETS = ["香港分部", "内贸销售部", "总务部", "财务部", "自营平台部", "采购部"]
-HR_SHEET = "人事部对接人指引"
+SIX_COL_SHEETS = ["香港分部", "内贸销售部", "总务部", "财务部", "自营平台部", "采购部", "宣传部"]
+HR_SHEET = "人事部"
 
 
 def main():
