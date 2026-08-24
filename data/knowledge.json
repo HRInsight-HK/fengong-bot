@@ -1,7 +1,7 @@
 {
- "version": "kb-91-1787395580",
+ "version": "kb-93-1787548296",
  "generated_from": "各部门对外承接事项汇总.xlsx（只读提取）",
- "count": 91,
+ "count": 93,
  "entries": [
   {
    "dept": "香港仓库",
@@ -629,7 +629,7 @@
    "module": "人员异动",
    "item": "人员异动需求（薪资变动、岗位变动、职级调整）",
    "when": "",
-   "primary": "Zoe",
+   "primary": "Massie",
    "backup": "",
    "source": "人事部对接人指引"
   },
@@ -638,7 +638,7 @@
    "module": "招聘",
    "item": "招聘需求对接（对接需求后给到需求部门具体招聘对接人）",
    "when": "",
-   "primary": "刘俊烨",
+   "primary": "Massie",
    "backup": "",
    "source": "人事部对接人指引"
   },
@@ -647,14 +647,14 @@
    "module": "招聘",
    "item": "招聘进度及面试",
    "when": "",
-   "primary": "刘俊烨",
+   "primary": "俊烨",
    "backup": "",
    "source": "人事部对接人指引"
   },
   {
    "dept": "人事部",
    "module": "薪酬福利",
-   "item": "工资条",
+   "item": "自营平台、离职员工工资条",
    "when": "",
    "primary": "Massie",
    "backup": "",
@@ -819,6 +819,24 @@
    "item": "营业执照借阅、各部门资料借阅",
    "when": "",
    "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "办公环境、后勤保障",
+   "item": "门禁卡办理、遗失补办",
+   "when": "",
+   "primary": "Esther",
+   "backup": "",
+   "source": "人事部对接人指引"
+  },
+  {
+   "dept": "人事部",
+   "module": "宣传部",
+   "item": "公司资料、宣传物料、文化墙内容",
+   "when": "",
+   "primary": "Yuna",
    "backup": "",
    "source": "人事部对接人指引"
   }
