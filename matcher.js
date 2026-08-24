@@ -1,6 +1,6 @@
 /**
  * matcher.js — 大白话问题 → 知识库匹配
- * 数据源：data/knowledge.json（由《各部门对外承接事项汇总.xlsx》只读提取，91 条）
+ * 数据源：data/knowledge.json（由《各部门对外承接事项汇总.xlsx》只读提取，93 条）
  * 策略：同义词扩展命中加权 + 字符二元组 Dice 相似度，多命中时列 Top3
  */
 'use strict';
