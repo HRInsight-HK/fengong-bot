@@ -1,7 +1,7 @@
 {
- "version": "kb-98-1787813590",
+ "version": "kb-103-1793330412",
  "generated_from": "各部门对外承接事项汇总.xlsx（只读提取）",
- "count": 98,
+ "count": 103,
  "entries": [
   {
    "dept": "香港仓库",
@@ -679,6 +679,51 @@
    "source": "宣传部"
   },
   {
+   "dept": "效率部",
+   "module": "IT支持",
+   "item": "电脑、网络等办公设备问题",
+   "when": "电脑故障、网络连不上、打印机等办公设备异常时",
+   "primary": "梁浩林",
+   "backup": "",
+   "source": "效率部"
+  },
+  {
+   "dept": "效率部",
+   "module": "IT支持",
+   "item": "软件安装",
+   "when": "需要安装或配置办公软件、工具时",
+   "primary": "梁浩林",
+   "backup": "",
+   "source": "效率部"
+  },
+  {
+   "dept": "效率部",
+   "module": "IT支持",
+   "item": "系统访问",
+   "when": "系统访问异常、账号权限开通与调整时",
+   "primary": "梁浩林",
+   "backup": "",
+   "source": "效率部"
+  },
+  {
+   "dept": "效率部",
+   "module": "IT支持",
+   "item": "数据安全",
+   "when": "涉及数据安全方面的需求或异常情况时",
+   "primary": "梁浩林",
+   "backup": "",
+   "source": "效率部"
+  },
+  {
+   "dept": "效率部",
+   "module": "IT支持",
+   "item": "IT基础设施与安全管理",
+   "when": "IT基础设施完善、安全管理建设等长期性需求",
+   "primary": "梁浩林",
+   "backup": "",
+   "source": "效率部"
+  },
+  {
    "dept": "人事部",
    "module": "人员异动",
    "item": "人员异动需求（薪资变动、岗位变动、职级调整）",
@@ -845,7 +890,7 @@
    "module": "出差",
    "item": "所有涉及差旅、订票等服务",
    "when": "",
-   "primary": "Esther",
+   "primary": "青霖",
    "backup": "",
    "source": "人事部"
   },
